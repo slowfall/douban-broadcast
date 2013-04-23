@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140AD47717257AD800760CC6 /* userInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 140AD47617257AD800760CC6 /* userInfo.json */; };
+		140AD47A172581C300760CC6 /* DBBApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 140AD479172581C200760CC6 /* DBBApi.m */; };
+		141934C41726DA5200848950 /* DBBWebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141934C31726DA4F00848950 /* DBBWebLoginViewController.m */; };
+		141934C71726E9B600848950 /* DBBMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141934C61726E9B200848950 /* DBBMainPageViewController.m */; };
 		14D6BC551722A83600BF8CEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC541722A83600BF8CEC /* UIKit.framework */; };
 		14D6BC571722A83600BF8CEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC561722A83600BF8CEC /* Foundation.framework */; };
 		14D6BC591722A83600BF8CEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC581722A83600BF8CEC /* CoreGraphics.framework */; };
@@ -178,6 +182,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140AD47617257AD800760CC6 /* userInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userInfo.json; sourceTree = "<group>"; };
+		140AD478172581C200760CC6 /* DBBApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBApi.h; sourceTree = "<group>"; };
+		140AD479172581C200760CC6 /* DBBApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBApi.m; sourceTree = "<group>"; };
+		141934C21726DA4C00848950 /* DBBWebLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBWebLoginViewController.h; sourceTree = "<group>"; };
+		141934C31726DA4F00848950 /* DBBWebLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBWebLoginViewController.m; sourceTree = "<group>"; };
+		141934C51726E9B000848950 /* DBBMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBMainPageViewController.h; sourceTree = "<group>"; };
+		141934C61726E9B200848950 /* DBBMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBMainPageViewController.m; sourceTree = "<group>"; };
 		14D6BC511722A83600BF8CEC /* DoubanBroadcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanBroadcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D6BC541722A83600BF8CEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		14D6BC561722A83600BF8CEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -422,7 +433,13 @@
 				14D6BC6C1722A83700BF8CEC /* MainStoryboard.storyboard */,
 				14D6BC6F1722A83700BF8CEC /* LoginViewController.h */,
 				14D6BC701722A83700BF8CEC /* LoginViewController.m */,
+				140AD478172581C200760CC6 /* DBBApi.h */,
+				140AD479172581C200760CC6 /* DBBApi.m */,
 				14D6BC5B1722A83600BF8CEC /* Supporting Files */,
+				141934C21726DA4C00848950 /* DBBWebLoginViewController.h */,
+				141934C31726DA4F00848950 /* DBBWebLoginViewController.m */,
+				141934C51726E9B000848950 /* DBBMainPageViewController.h */,
+				141934C61726E9B200848950 /* DBBMainPageViewController.m */,
 			);
 			path = DoubanBroadcast;
 			sourceTree = "<group>";
@@ -435,6 +452,7 @@
 				14D6BC5D1722A83600BF8CEC /* InfoPlist.strings */,
 				14D6BC601722A83600BF8CEC /* main.m */,
 				14D6BC621722A83600BF8CEC /* DoubanBroadcast-Prefix.pch */,
+				140AD47617257AD800760CC6 /* userInfo.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -812,6 +830,7 @@
 				14EF915B1722AA07004BB80B /* user_avatar_default.jpg in Resources */,
 				14EF915D1722AA3E004BB80B /* icon.png in Resources */,
 				14EF915F1722AA64004BB80B /* icon@2x.png in Resources */,
+				140AD47717257AD800760CC6 /* userInfo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +868,9 @@
 				14D6BC611722A83600BF8CEC /* main.m in Sources */,
 				14D6BC651722A83600BF8CEC /* AppDelegate.m in Sources */,
 				14D6BC711722A83700BF8CEC /* LoginViewController.m in Sources */,
+				140AD47A172581C300760CC6 /* DBBApi.m in Sources */,
+				141934C41726DA5200848950 /* DBBWebLoginViewController.m in Sources */,
+				141934C71726E9B600848950 /* DBBMainPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

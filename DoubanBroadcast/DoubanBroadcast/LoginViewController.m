@@ -26,4 +26,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)textFieldDoneEditing:(id)sender {
+}
+
+- (IBAction)backgroundTap:(id)sender {
+    [self.nameField resignFirstResponder];
+    [self.pwdField resignFirstResponder];
+}
+
+- (IBAction)loginPressed:(id)sender
+{
+    NSLog(@"%@", self.nameField.text);
+    if(self.nameField.text) {
+        [self performSegueWithIdentifier:@"login" sender:self];
+    } else {
+        NSLog(@"no name.");
+    }
+}
+
 @end

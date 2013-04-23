@@ -7,11 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import <libDoubanApiEngine/DOUAPIEngine.h>
 
 @implementation AppDelegate
+static NSString * const kAPIKey = @"01078b207383c5510316a1615a8b4ff3";
+static NSString * const kPrivateKey = @"fade1696d036c642";
+static NSString * const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    DOUService *service = [DOUService sharedInstance];
+    service.clientId = kAPIKey;
+    service.clientSecret = kPrivateKey;
+    if ([service isValid]) {
+        service.apiBaseUrlString = kHttpsApiBaseUrl;
+    }
+    else {
+        service.apiBaseUrlString = kHttpApiBaseUrl;
+    }
+    
     // Override point for customization after application launch.
     return YES;
 }
