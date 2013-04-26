@@ -55,11 +55,13 @@ static NSString * const kGrantTypeAuthorizationCode = @"authorization_code";
 static NSString * const kGrantTypeRefreshToken = @"refresh_token";
 static NSString * const kGrantTypePassword = @"password";
 
+
 static NSString * const kUsernameKey = @"username";
 static NSString * const kPasswordKey = @"password";
 
 
 static NSString * const kDoubanUserIdKey = @"douban_user_id";
+static NSString * const kDoubanUserNameKey = @"douban_user_name";
 
 static NSString * const kOAuth2ResponseType = @"response_type";
 static NSString * const kOAuth2ResponseTypeCode = @"code";

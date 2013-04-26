@@ -8,6 +8,7 @@
 
 #import "DBBApi.h"
 #import <libDoubanApiEngine/DOUAPIEngine.h>
+#import "DBBUtil.h"
 
 @implementation DBBApi
 
@@ -32,26 +33,8 @@
     return url;
 }
 
-- (NSDictionary *)fetchUserNeighboursBroadcast
+- (NSArray *)fetchUserNeighboursBroadcast
 {
-    NSString *urlStr = [@"shuo/v2/statuses/home_timeline" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:urlStr parameters:nil];
-    
-    
-    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
-        
-        NSLog(@"code:%d, str:%@", [req responseStatusCode], [req responseString]);
-        NSError *theError = [req doubanError];
-        if (!theError) {
-            NSLog(@"发送成功");
-        }
-        else {
-            NSLog(@"%@", theError);
-        }
-        
-    };
-    DOUService *service = [DOUService sharedInstance];
-    [service get:query callback:completionBlock];
-    return nil;
+    return [DBBUtil dictionaryWithJSONFile:@"mainpage"];
 }
 @end

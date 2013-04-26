@@ -7,6 +7,7 @@
 //
 
 #import "DBBMainPageViewController.h"
+#import "DBBMainPageCell.h"
 #import "DBBApi.h"
 
 @interface DBBMainPageViewController ()
@@ -25,12 +26,19 @@
     return self;
 }
 
+- (id)init
+{
+    self = [super init];
+        NSLog(@"self init");
+    if (self) {
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSLog(@"in dbb main page, did load");
-    self.dbbApi = [[DBBApi alloc] init];
-    [self.dbbApi fetchUserNeighboursBroadcast];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -48,25 +56,35 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+    if (self.dbbApi == nil) {
+        self.dbbApi = [[DBBApi alloc] init];
+        self.userInfoArray = [self.dbbApi fetchUserNeighboursBroadcast];
+        NSLog(@"%@", self.userInfoArray);
+    }
     // Return the number of rows in the section.
-    return 0;
+    NSLog(@"number of rows=%lu",(unsigned long)[self.userInfoArray count]);
+    return [self.userInfoArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"MainPageCell";
+    DBBMainPageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSInteger row = [indexPath row];
     
-    // Configure the cell...
-    
+    NSDictionary *dic = [self.userInfoArray objectAtIndex:row];
+    NSLog(@"in table view cell for row %u at index path=%@", row, dic);
+    cell.titleLabel.text = [dic valueForKey:@"title"];
+    cell.contentText.text =[dic valueForKey:@"text"];
+    cell.timeLabel.text = [dic valueForKey:@"created_at"];
+    NSDictionary *userDic = [dic valueForKey:@"user"];
+    cell.nameLabel.text = [userDic valueForKey:@"screen_name"];
     return cell;
 }
 

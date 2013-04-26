@@ -10,4 +10,5 @@
 
 @interface DBBMainPageViewController : UITableViewController
 
+@property (strong, nonatomic) NSArray *userInfoArray;
 @end

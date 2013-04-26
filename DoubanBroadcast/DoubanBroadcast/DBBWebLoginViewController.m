@@ -129,6 +129,9 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
     NSLog(@"success!");
+    [dic writeToFile:@"logininfo.plist" atomically:YES];
+    DOUOAuthStore *store = [DOUOAuthStore sharedInstance];
+    [store updateWithSuccessDictionary:dic];
     [self performSegueWithIdentifier:@"webLogin" sender:self];
 }
 

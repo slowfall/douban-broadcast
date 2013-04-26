@@ -14,5 +14,5 @@ static NSString * const kRedirectUrl = @"http://www.douban.com/location/mobile";
 @interface DBBApi : NSObject
 - (NSMutableDictionary *)userInfo;
 - (NSURL *)makeRequestURL;
-- (NSDictionary *)fetchUserNeighboursBroadcast;
+- (NSArray *)fetchUserNeighboursBroadcast;
 @end

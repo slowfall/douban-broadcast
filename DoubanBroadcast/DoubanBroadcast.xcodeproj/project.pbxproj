@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		140AD47717257AD800760CC6 /* userInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 140AD47617257AD800760CC6 /* userInfo.json */; };
 		140AD47A172581C300760CC6 /* DBBApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 140AD479172581C200760CC6 /* DBBApi.m */; };
 		141934C41726DA5200848950 /* DBBWebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141934C31726DA4F00848950 /* DBBWebLoginViewController.m */; };
 		141934C71726E9B600848950 /* DBBMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141934C61726E9B200848950 /* DBBMainPageViewController.m */; };
+		14A80BB1172AAE8A00F25F50 /* DBBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A80BB0172AAE8A00F25F50 /* DBBUtil.m */; };
 		14D6BC551722A83600BF8CEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC541722A83600BF8CEC /* UIKit.framework */; };
 		14D6BC571722A83600BF8CEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC561722A83600BF8CEC /* Foundation.framework */; };
 		14D6BC591722A83600BF8CEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC581722A83600BF8CEC /* CoreGraphics.framework */; };
@@ -24,6 +24,8 @@
 		14D6BC7B1722A83700BF8CEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC561722A83600BF8CEC /* Foundation.framework */; };
 		14D6BC831722A83800BF8CEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14D6BC811722A83800BF8CEC /* InfoPlist.strings */; };
 		14D6BC861722A83800BF8CEC /* DoubanBroadcastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6BC851722A83800BF8CEC /* DoubanBroadcastTests.m */; };
+		14E7483B172984470091DFF3 /* mainpage.json in Resources */ = {isa = PBXBuildFile; fileRef = 14E7483A172984470091DFF3 /* mainpage.json */; };
+		14E7483E1729881E0091DFF3 /* DBBMainPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E7483D1729881D0091DFF3 /* DBBMainPageCell.m */; };
 		14EF90D21722AA07004BB80B /* 1pxblackspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 14EF90481722AA06004BB80B /* 1pxblackspace.png */; };
 		14EF90D31722AA07004BB80B /* 1pxwhitespace.png in Resources */ = {isa = PBXBuildFile; fileRef = 14EF90491722AA06004BB80B /* 1pxwhitespace.png */; };
 		14EF90D41722AA07004BB80B /* appicon_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 14EF904A1722AA06004BB80B /* appicon_search.png */; };
@@ -182,13 +184,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		140AD47617257AD800760CC6 /* userInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userInfo.json; sourceTree = "<group>"; };
 		140AD478172581C200760CC6 /* DBBApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBApi.h; sourceTree = "<group>"; };
 		140AD479172581C200760CC6 /* DBBApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBApi.m; sourceTree = "<group>"; };
 		141934C21726DA4C00848950 /* DBBWebLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBWebLoginViewController.h; sourceTree = "<group>"; };
 		141934C31726DA4F00848950 /* DBBWebLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBWebLoginViewController.m; sourceTree = "<group>"; };
 		141934C51726E9B000848950 /* DBBMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBMainPageViewController.h; sourceTree = "<group>"; };
 		141934C61726E9B200848950 /* DBBMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBMainPageViewController.m; sourceTree = "<group>"; };
+		14A80BAF172AAE8A00F25F50 /* DBBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBUtil.h; sourceTree = "<group>"; };
+		14A80BB0172AAE8A00F25F50 /* DBBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBUtil.m; sourceTree = "<group>"; };
 		14D6BC511722A83600BF8CEC /* DoubanBroadcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanBroadcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D6BC541722A83600BF8CEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		14D6BC561722A83600BF8CEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -208,6 +211,9 @@
 		14D6BC821722A83800BF8CEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14D6BC841722A83800BF8CEC /* DoubanBroadcastTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanBroadcastTests.h; sourceTree = "<group>"; };
 		14D6BC851722A83800BF8CEC /* DoubanBroadcastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanBroadcastTests.m; sourceTree = "<group>"; };
+		14E7483A172984470091DFF3 /* mainpage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mainpage.json; path = ../mainpage.json; sourceTree = "<group>"; };
+		14E7483C1729881D0091DFF3 /* DBBMainPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBMainPageCell.h; sourceTree = "<group>"; };
+		14E7483D1729881D0091DFF3 /* DBBMainPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBMainPageCell.m; sourceTree = "<group>"; };
 		14EF90481722AA06004BB80B /* 1pxblackspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1pxblackspace.png; sourceTree = "<group>"; };
 		14EF90491722AA06004BB80B /* 1pxwhitespace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1pxwhitespace.png; sourceTree = "<group>"; };
 		14EF904A1722AA06004BB80B /* appicon_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_search.png; sourceTree = "<group>"; };
@@ -440,6 +446,10 @@
 				141934C31726DA4F00848950 /* DBBWebLoginViewController.m */,
 				141934C51726E9B000848950 /* DBBMainPageViewController.h */,
 				141934C61726E9B200848950 /* DBBMainPageViewController.m */,
+				14E7483C1729881D0091DFF3 /* DBBMainPageCell.h */,
+				14E7483D1729881D0091DFF3 /* DBBMainPageCell.m */,
+				14A80BAF172AAE8A00F25F50 /* DBBUtil.h */,
+				14A80BB0172AAE8A00F25F50 /* DBBUtil.m */,
 			);
 			path = DoubanBroadcast;
 			sourceTree = "<group>";
@@ -452,7 +462,7 @@
 				14D6BC5D1722A83600BF8CEC /* InfoPlist.strings */,
 				14D6BC601722A83600BF8CEC /* main.m */,
 				14D6BC621722A83600BF8CEC /* DoubanBroadcast-Prefix.pch */,
-				140AD47617257AD800760CC6 /* userInfo.json */,
+				14E7483A172984470091DFF3 /* mainpage.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -830,7 +840,7 @@
 				14EF915B1722AA07004BB80B /* user_avatar_default.jpg in Resources */,
 				14EF915D1722AA3E004BB80B /* icon.png in Resources */,
 				14EF915F1722AA64004BB80B /* icon@2x.png in Resources */,
-				140AD47717257AD800760CC6 /* userInfo.json in Resources */,
+				14E7483B172984470091DFF3 /* mainpage.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -871,6 +881,8 @@
 				140AD47A172581C300760CC6 /* DBBApi.m in Sources */,
 				141934C41726DA5200848950 /* DBBWebLoginViewController.m in Sources */,
 				141934C71726E9B600848950 /* DBBMainPageViewController.m in Sources */,
+				14E7483E1729881E0091DFF3 /* DBBMainPageCell.m in Sources */,
+				14A80BB1172AAE8A00F25F50 /* DBBUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
