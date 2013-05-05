@@ -35,6 +35,15 @@
 
 - (NSArray *)fetchUserNeighboursBroadcast
 {
-    return [DBBUtil dictionaryWithJSONFile:@"mainpage"];
+    return [DBBUtil arrayWithJSONFile:@"mainpage"];
+}
+
+- (void)fetchOAuthUserInfo:(id)delegate
+{
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:@"/pepole/@me" parameters:nil];
+    DOUService *service = [DOUService sharedInstance];
+    service.apiBaseUrlString = kHttpApiBaseUrl;
+  
+    [service get:query delegate:delegate];
 }
 @end

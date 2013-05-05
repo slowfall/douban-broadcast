@@ -10,7 +10,7 @@
 
 @implementation DBBUtil
 
-+ (NSArray *) dictionaryWithJSONFile:(NSString *)fileName
++ (NSArray *) arrayWithJSONFile:(NSString *)fileName
 {
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];

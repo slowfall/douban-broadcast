@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface DBBUtil : NSObject
-+(NSArray *) dictionaryWithJSONFile:(NSString *)fileName;
++(NSArray *) arrayWithJSONFile:(NSString *)fileName;
 @end

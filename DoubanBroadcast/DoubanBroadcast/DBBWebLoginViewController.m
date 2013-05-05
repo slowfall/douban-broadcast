@@ -51,22 +51,19 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        NSLog(@"self init with nib name");
-        self.dbbApi = [[DBBApi alloc] init];
-        self.requestURL = [self.dbbApi makeRequestURL];
     }
     return self;
 }
 
-- (id)init
+- (void)setup
 {
-    self = [super init];
-    if (self) {
-        NSLog(@"self init");
-        self.dbbApi = [[DBBApi alloc] init];
-        self.requestURL = [self.dbbApi makeRequestURL];
-    }
-    return self;
+    self.dbbApi = [[DBBApi alloc] init];
+    self.requestURL = [self.dbbApi makeRequestURL];
+}
+
+- (void)awakeFromNib
+{
+    [self setup];
 }
 
 - (void)viewDidLoad
@@ -128,11 +125,15 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
-    NSLog(@"success!");
     [dic writeToFile:@"logininfo.plist" atomically:YES];
     DOUOAuthStore *store = [DOUOAuthStore sharedInstance];
     [store updateWithSuccessDictionary:dic];
     [self performSegueWithIdentifier:@"webLogin" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {

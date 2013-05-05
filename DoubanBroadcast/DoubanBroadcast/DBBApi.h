@@ -15,4 +15,5 @@ static NSString * const kRedirectUrl = @"http://www.douban.com/location/mobile";
 - (NSMutableDictionary *)userInfo;
 - (NSURL *)makeRequestURL;
 - (NSArray *)fetchUserNeighboursBroadcast;
+- (void)fetchOAuthUserInfo:(id) delegate;
 @end

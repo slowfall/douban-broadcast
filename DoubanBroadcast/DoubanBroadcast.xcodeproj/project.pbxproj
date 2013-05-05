@@ -11,6 +11,7 @@
 		141934C41726DA5200848950 /* DBBWebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141934C31726DA4F00848950 /* DBBWebLoginViewController.m */; };
 		141934C71726E9B600848950 /* DBBMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141934C61726E9B200848950 /* DBBMainPageViewController.m */; };
 		14A80BB1172AAE8A00F25F50 /* DBBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A80BB0172AAE8A00F25F50 /* DBBUtil.m */; };
+		14AEDE641732C72D0057F0B3 /* DBBPersonalInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AEDE631732C72D0057F0B3 /* DBBPersonalInfoCell.m */; };
 		14D6BC551722A83600BF8CEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC541722A83600BF8CEC /* UIKit.framework */; };
 		14D6BC571722A83600BF8CEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC561722A83600BF8CEC /* Foundation.framework */; };
 		14D6BC591722A83600BF8CEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC581722A83600BF8CEC /* CoreGraphics.framework */; };
@@ -24,6 +25,7 @@
 		14D6BC7B1722A83700BF8CEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6BC561722A83600BF8CEC /* Foundation.framework */; };
 		14D6BC831722A83800BF8CEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14D6BC811722A83800BF8CEC /* InfoPlist.strings */; };
 		14D6BC861722A83800BF8CEC /* DoubanBroadcastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6BC851722A83800BF8CEC /* DoubanBroadcastTests.m */; };
+		14E6A5881730E9BE0026865C /* userInfo.xml in Resources */ = {isa = PBXBuildFile; fileRef = 14E6A5871730E9BE0026865C /* userInfo.xml */; };
 		14E7483B172984470091DFF3 /* mainpage.json in Resources */ = {isa = PBXBuildFile; fileRef = 14E7483A172984470091DFF3 /* mainpage.json */; };
 		14E7483E1729881E0091DFF3 /* DBBMainPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E7483D1729881D0091DFF3 /* DBBMainPageCell.m */; };
 		14EF90D21722AA07004BB80B /* 1pxblackspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 14EF90481722AA06004BB80B /* 1pxblackspace.png */; };
@@ -171,6 +173,7 @@
 		14EF91691722AB88004BB80B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EF91681722AB88004BB80B /* Security.framework */; };
 		14EF916B1722AB91004BB80B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EF916A1722AB91004BB80B /* SystemConfiguration.framework */; };
 		14EF916D1722AB9A004BB80B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EF916C1722AB9A004BB80B /* MobileCoreServices.framework */; };
+		14F698BB172C15820094D65C /* DBBPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F698BA172C15820094D65C /* DBBPersonalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +195,8 @@
 		141934C61726E9B200848950 /* DBBMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBMainPageViewController.m; sourceTree = "<group>"; };
 		14A80BAF172AAE8A00F25F50 /* DBBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBUtil.h; sourceTree = "<group>"; };
 		14A80BB0172AAE8A00F25F50 /* DBBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBUtil.m; sourceTree = "<group>"; };
+		14AEDE621732C72D0057F0B3 /* DBBPersonalInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBPersonalInfoCell.h; sourceTree = "<group>"; };
+		14AEDE631732C72D0057F0B3 /* DBBPersonalInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBPersonalInfoCell.m; sourceTree = "<group>"; };
 		14D6BC511722A83600BF8CEC /* DoubanBroadcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanBroadcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D6BC541722A83600BF8CEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		14D6BC561722A83600BF8CEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -211,6 +216,7 @@
 		14D6BC821722A83800BF8CEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14D6BC841722A83800BF8CEC /* DoubanBroadcastTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanBroadcastTests.h; sourceTree = "<group>"; };
 		14D6BC851722A83800BF8CEC /* DoubanBroadcastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanBroadcastTests.m; sourceTree = "<group>"; };
+		14E6A5871730E9BE0026865C /* userInfo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = userInfo.xml; sourceTree = "<group>"; };
 		14E7483A172984470091DFF3 /* mainpage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mainpage.json; path = ../mainpage.json; sourceTree = "<group>"; };
 		14E7483C1729881D0091DFF3 /* DBBMainPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBMainPageCell.h; sourceTree = "<group>"; };
 		14E7483D1729881D0091DFF3 /* DBBMainPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBMainPageCell.m; sourceTree = "<group>"; };
@@ -359,6 +365,8 @@
 		14EF91681722AB88004BB80B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		14EF916A1722AB91004BB80B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		14EF916C1722AB9A004BB80B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		14F698B9172C15820094D65C /* DBBPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBBPersonalViewController.h; sourceTree = "<group>"; };
+		14F698BA172C15820094D65C /* DBBPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBPersonalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +458,10 @@
 				14E7483D1729881D0091DFF3 /* DBBMainPageCell.m */,
 				14A80BAF172AAE8A00F25F50 /* DBBUtil.h */,
 				14A80BB0172AAE8A00F25F50 /* DBBUtil.m */,
+				14F698B9172C15820094D65C /* DBBPersonalViewController.h */,
+				14F698BA172C15820094D65C /* DBBPersonalViewController.m */,
+				14AEDE621732C72D0057F0B3 /* DBBPersonalInfoCell.h */,
+				14AEDE631732C72D0057F0B3 /* DBBPersonalInfoCell.m */,
 			);
 			path = DoubanBroadcast;
 			sourceTree = "<group>";
@@ -463,6 +475,7 @@
 				14D6BC601722A83600BF8CEC /* main.m */,
 				14D6BC621722A83600BF8CEC /* DoubanBroadcast-Prefix.pch */,
 				14E7483A172984470091DFF3 /* mainpage.json */,
+				14E6A5871730E9BE0026865C /* userInfo.xml */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -841,6 +854,7 @@
 				14EF915D1722AA3E004BB80B /* icon.png in Resources */,
 				14EF915F1722AA64004BB80B /* icon@2x.png in Resources */,
 				14E7483B172984470091DFF3 /* mainpage.json in Resources */,
+				14E6A5881730E9BE0026865C /* userInfo.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,6 +897,8 @@
 				141934C71726E9B600848950 /* DBBMainPageViewController.m in Sources */,
 				14E7483E1729881E0091DFF3 /* DBBMainPageCell.m in Sources */,
 				14A80BB1172AAE8A00F25F50 /* DBBUtil.m in Sources */,
+				14F698BB172C15820094D65C /* DBBPersonalViewController.m in Sources */,
+				14AEDE641732C72D0057F0B3 /* DBBPersonalInfoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

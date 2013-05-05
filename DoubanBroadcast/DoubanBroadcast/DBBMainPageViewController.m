@@ -21,24 +21,27 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        NSLog(@"self init with style");
     }
     return self;
 }
 
-- (id)init
+- (void)setup
 {
-    self = [super init];
-        NSLog(@"self init");
-    if (self) {
+    if (self.dbbApi == nil) {
+        self.dbbApi = [[DBBApi alloc] init];
+        self.userInfoArray = [self.dbbApi fetchUserNeighboursBroadcast];
     }
-    return self;
+}
+
+- (void)awakeFromNib
+{
+    NSLog(@"in awake from nib");
+    [self setup];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"in dbb main page, did load");
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -62,13 +65,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.dbbApi == nil) {
-        self.dbbApi = [[DBBApi alloc] init];
-        self.userInfoArray = [self.dbbApi fetchUserNeighboursBroadcast];
-        NSLog(@"%@", self.userInfoArray);
-    }
     // Return the number of rows in the section.
-    NSLog(@"number of rows=%lu",(unsigned long)[self.userInfoArray count]);
     return [self.userInfoArray count];
 }
 
@@ -79,7 +76,6 @@
     NSInteger row = [indexPath row];
     
     NSDictionary *dic = [self.userInfoArray objectAtIndex:row];
-    NSLog(@"in table view cell for row %u at index path=%@", row, dic);
     cell.titleLabel.text = [dic valueForKey:@"title"];
     cell.contentText.text =[dic valueForKey:@"text"];
     cell.timeLabel.text = [dic valueForKey:@"created_at"];
